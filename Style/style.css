@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Ubuntu&display=swap");
 /* common style and utilits  */
@@ -44,46 +49,43 @@ hr {
 /*   ---------------------
      header style
 ----------------------  */
-/* header {
-  background: #562eff;
-  padding: 10px 0;
-  animation: slideDown 1s ease 0s 1;
-}
-
-header .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header {
+  height: 10vh;
 }
 .logo {
-  display: flex;
+  font-size: xx-large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #562eff;
+  margin-left: 10px;
 }
-.logo img {
-  width: 45px;
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 150px;
+}
+.nav-container :hover {
+  color: rgba(253, 25, 71, 0.836);
+  transform-origin: 0vmin;
 }
 .navigation {
   display: flex;
 }
-.navigation-items {
-  display: flex;
-  align-items: center;
-}
-.navigation-items li {
+.navigation li {
   list-style: none;
-  padding: 0 20px;
+  margin: 20px;
+  font-weight: 600;
 }
-.navigation-items li a {
-  color: #ffffff;
+.navigation li a {
   text-decoration: none;
 }
-.navigation-items li a:hover {
-  color: #ff4a60;
-}
-.avatar {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-} */
+
 /* --------------------
    Top Players style
 -------------------- */
@@ -93,12 +95,13 @@ header .navbar {
 .section-title {
   color: #562eff;
   font-size: 24px;
-  margin-top: 3px;
+  margin-top: 5 px;
 }
 .players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 30px;
+  margin-top: 25px;
 }
 .player {
   display: flex;
@@ -120,6 +123,7 @@ header .navbar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 26px;
+  margin-top: 25px;
 }
 .blog {
   display: flex;
@@ -145,18 +149,24 @@ header .navbar {
 }
 
 /*   ---------------------------
-     courses style
+      courses style
 -------------------------  */
 .courses {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 24px;
+  margin-top: 25px;
 }
 .course {
   text-align: center;
   box-shadow: 0px 5.342289924621582px 13.35572338104248px 0px #0000000d;
-  width: 252.42px;
-  height: 279.79px;
+  width: 255.42px;
+  height: 280px;
+  line-height: 35px;
+  border-radius: 5px;
+}
+.courses :hover {
+  background-color: rgba(222, 248, 248, 0.5);
   border-radius: 5px;
 }
 .course .course-banner img {
@@ -171,7 +181,9 @@ header .navbar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 14px;
+  justify-items: center;
 }
+
 .course-duration {
   display: flex;
   align-items: center;
@@ -184,6 +196,7 @@ header .navbar {
   font-size: 14.6913px;
   border-radius: 14.6913px;
 }
+
 .fa-clock {
   width: 20.03px;
   margin-right: 5.42px;
@@ -199,7 +212,25 @@ header .navbar {
   color: #aeaeae;
   opacity: 0.25;
 }
-/* Media Queries */
+
+/*------------------
+   footer
+ -------------------  */
+footer {
+  background-color: rgba(0, 0, 0, 0.541);
+  color: white;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 35px;
+  line-height: 2em;
+}
+#footer-span {
+  color: #ff4a60;
+}
+
+/*--------------------
+    Media Queries
+ -------------------- */
 @media (max-width: 688px) {
   .navigation-items li {
     padding: 0 10px;
